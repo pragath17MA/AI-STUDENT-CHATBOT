@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTE Student Assistant Chatbot</title>
+    <!-- Use Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h2>DTE Assistant</h2>
+            </div>
+
+            <button class="new-chat-btn">
+                <i class="fas fa-plus"></i> New Conversation
+            </button>
+
+            <div class="chat-history">
+                <p class="history-title">Popular Topics</p>
+                <ul class="history-list">
+                    <li><i class="fas fa-book-open"></i> Admission Process</li>
+                    <li><i class="fas fa-calendar-alt"></i> Exams Timetable</li>
+                    <li><i class="fas fa-graduation-cap"></i> Scholarship Info</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Curriculum Update</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn"><i class="fas fa-circle-question"></i> Help & Support</button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1>Department of Technical Education</h1>
+                    <p>AI-Powered Student Resource Center</p>
+                </div>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="theme-toggle" title="Switch Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Initial Welcome Message from Bot -->
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Welcome to the DTE Student Assistant! 🎓</p>
+                        <p>I am your dedicated AI guide for the Department of Technical Education. I can provide
+                            instantaneous information regarding:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
+                            <li>Diploma Admissions & Eligibility</li>
+                            <li>Syllabus & Curriculum details</li>
+                            <li>Examination Timetables & Results</li>
+                            <li>Scholarship Applications (SSP/NSP)</li>
+                            <li>Career Guidance & Higher Education</li>
+                        </ul>
+                        <p>How may I assist your educational journey today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input Section -->
+            <div class="chat-input-container">
+                <form id="chat-form" class="chat-form">
+                    <div class="input-wrapper">
+                        <input type="text" id="user-input"
+                            placeholder="Type your query here (e.g., 'When do admissions start?')" autocomplete="off"
+                            required>
+                        <button type="submit" id="send-btn" class="send-btn" title="Send Message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="footer-text">
+                    <p>Information provided by AI Assistant. For official declarations, please check the DTE website.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
