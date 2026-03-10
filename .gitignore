@@ -30,7 +30,7 @@ env/
 .env/
 
 # Environment variables
-.env
+.env.example
 .flaskenv
 
 # Database
