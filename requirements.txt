@@ -3,3 +3,6 @@ Werkzeug==3.0.0
 python-dotenv
 scikit-learn
 numpy
+google-generativeai
+flask-limiter
+waitress
